@@ -2,9 +2,9 @@
 
 **Author**: Josh West and Suzanne Richman
 
-**Version**: 1.0.7 
+**Version**: 1.0.8
 
-**UPDATES** 1.0.6 and 1.0.7 was completed by Suzanne Richman alone
+**UPDATES** 1.0.6 and 1.0.7, 1.0.8 were completed by Suzanne Richman alone
 
 ## Overview
 
@@ -45,6 +45,8 @@ We used IcoMoon icon font for navigation icons. We included the jQuery library. 
 02-15-2018 9:55 pm - Fork and clone to create my own solution to the lab, with Allie's permission given earlier today in Slack.
 
 02-17-2018  11:33 pm - Worked on and fixed layout.CSS for styling of about section. Fixed main navigation in articleView.js. Updated index.html for placement of teaser/show less. Got teaser to work, but not showing of article or show less. 
+
+02-18-2018 2:41 pm - Finally got the teaser (readmore/show less) working correctly. excited to have all tasks and functionality working as expected for users.
 
 ## Credits and Collaborations
 
