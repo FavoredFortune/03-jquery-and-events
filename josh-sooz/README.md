@@ -2,9 +2,9 @@
 
 **Author**: Josh West and Suzanne Richman
 
-**Version**: 1.0.8
+**Version**: 1.0.9
 
-**UPDATES** 1.0.6 and 1.0.7, 1.0.8 were completed by Suzanne Richman alone
+**UPDATES** 1.0.6 and 1.0.7, 1.0.8 and 1.0.9 were completed by Suzanne Richman 
 
 ## Overview
 
@@ -47,6 +47,8 @@ We used IcoMoon icon font for navigation icons. We included the jQuery library. 
 02-17-2018  11:33 pm - Worked on and fixed layout.CSS for styling of about section. Fixed main navigation in articleView.js. Updated index.html for placement of teaser/show less. Got teaser to work, but not showing of article or show less. 
 
 02-18-2018 2:41 pm - Finally got the teaser (readmore/show less) working correctly. excited to have all tasks and functionality working as expected for users.
+
+02-21-2018 10:50pm - Found my lost code. Lost code didn't work as expected. Console logs not showing. Chatted with Haron on the setTeasers function, per that chat found animate and scrollTop. With tests and console logs, still not working. FOUND MISSING ")"! And now it all works. Also updated base css so images resolve more cleanly in both mobile and desktop views.
 
 ## Credits and Collaborations
 

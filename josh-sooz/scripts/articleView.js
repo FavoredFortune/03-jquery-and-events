@@ -14,7 +14,6 @@ articleView.populateFilters = function() {
       // To do so, Build an <option> DOM element that we can append to the author <select> element.
       // Start by grabbing the author's name from `this` article element, and then use that bit of text to create the option tag (in a variable named `optionTag`) that we can append to the #author-filter select element.
       authorName = $(this).attr('data-author');
-      // console.log(authorName);
 
       // DONE: Refactor this concatenation using a template literal.
       optionTag = `<option value="${authorName}">${authorName}</option>`;
@@ -26,7 +25,6 @@ articleView.populateFilters = function() {
       // REVIEW: Similar to the above, but...
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
       category = $(this).attr('data-category');
-      console.log(category);
 
       // DONE: Refactor this concatenation using a template literal.
       optionTag = `<option value="${category}">${category}</option>`;
@@ -95,7 +93,7 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
+articleView.setTeasers = function(){
   // REVIEW: Hide elements beyond the first 2 in any article body.
   $('.article-body *:nth-of-type(n+2)').hide();
 
@@ -104,24 +102,29 @@ articleView.setTeasers = function() {
 
   //DONE: STRETCH GOAL: Also completed stretch goal of showing less content on action
 
-  $('article').on('click','a .read-on', function(e){
-    if($(this).text() === 'Read on →'){
-      $(this).parent().find('*').fadeIn(FadeIn_TimeOut);
-      $(this).html('Show less &larr;');
-    } else{
-      $('body').fadeIn(FadeIn_TimeOut);
+  $('article').on('click', 'a.read-on', function() {
+    if ($(this).text() === 'Read on →') {
+
+      $(this).parent().find('*').fadeIn();
+
+      $(this).html('Show Less &larr;');
+      console.log('Change read on to show less');
+    } else {
+      $('body').animate({
+        scrollTop: ($(this).parent().offset().top)
+      },350);
+      console.log('works3');
       $(this).html('Read on &rarr;');
-      $(this).text('Read on &rarr;');
-      $(this).parent().find('.article-body *:nth-of-type(n+2)').show();
+      $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
     }
   });
 };
 
 // DONE: Call all of the above functions, once we are sure the DOM is ready.
-$(document).ready(function(){
+$(document).ready(function() {
   articleView.populateFilters();
-  articleView.handleMainNav();
-  articleView.handleAuthorFilter();
   articleView.handleCategoryFilter();
+  articleView.handleAuthorFilter();
+  articleView.handleMainNav();
   articleView.setTeasers();
 })
